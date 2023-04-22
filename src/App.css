@@ -5,17 +5,21 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.logo-vite:hover {
+  filter: drop-shadow(0 0 2em #00fac4aa);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.logo-react:hover {
+  filter: drop-shadow(0 0 2em #00fac4aa);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.logo-vscode:hover {
+  filter: drop-shadow(0 0 2em #00fac4aa);
+}
+.logo-tailwind:hover {
+  filter: drop-shadow(0 0 2em #00fac4aa);
+}
+.logo-profile:hover {
+  filter: drop-shadow(0 0 2em #00fac4aa);
 }
 
 @keyframes logo-spin {
@@ -40,3 +44,76 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+.logo-vite{
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+.logo-react{
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+.logo-vscode{
+  margin-top: 50px;
+  max-width: 3rem;
+  max-height: 3rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: -10px;
+
+}
+
+.logo-tailwind{
+  max-width: 3rem;
+  max-height: 3rem;
+}
+
+.logo-profile{
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 15px 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.powered-by {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.powered-by a {
+  display: block;
+  margin-left: 10px;
+}
+
+.project-title{
+  font-family: Chakra Petch;
+}
+
+#powered-by-text{
+  font-size: 14px;
+  margin-top: 5px;
+  margin-right: 18px;
+}
+
