@@ -35,7 +35,7 @@ export default function LoginForm({ setCurrentUser }) {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen translate-x-[37rem]">
       <div className="register-field text-4xl translate-y-[-6.5rem]">
         Login to Account
       </div>
@@ -72,7 +72,7 @@ export default function LoginForm({ setCurrentUser }) {
         </button>
         <div className="mt-4">
           <p>Don't have an account?</p>
-          <Link to="/register" className="font-bold underline">Sign up</Link>
+          <Link to="/register" className="signup-link font-bold underline translate-x-[10rem] ">Sign up</Link>
         </div>
       </form>
     </div>

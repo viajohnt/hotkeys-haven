@@ -43,7 +43,7 @@ export default function SignUpForm({setCurrentUser}) {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center h-screen'>
+    <div className='flex flex-col justify-center items-center h-screen translate-x-[37rem]'>
       <div className='register-field text-4xl translate-y-[-6.5rem]'>
         Create an Account
       </div>

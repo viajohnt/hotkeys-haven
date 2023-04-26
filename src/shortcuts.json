@@ -1,110 +1,104 @@
 {
-    "shortcuts": [
-      {
-        "id": 1,
-        "description": "Show Command Palette",
-        "shortcut": "Ctrl + Shift + P"
-      },
-      {
-        "id": 2,
-        "description": "Open File",
-        "shortcut": "Ctrl + O"
-      },
-      {
-        "id": 3,
-        "description": "Save File",
-        "shortcut": "Ctrl + S"
-      },
-      {
-        "id": 4,
-        "description": "Close Window",
-        "shortcut": "Ctrl + Shift + W"
-      },
-      {
-        "id": 5,
-        "description": "Undo",
-        "shortcut": "Ctrl + Z"
-      },
-      {
-        "id": 6,
-        "description": "Redo",
-        "shortcut": "Ctrl + Shift + Z"
-      },
-      {
-        "id": 7,
-        "description": "Copy",
-        "shortcut": "Ctrl + C"
-      },
-      {
-        "id": 8,
-        "description": "Cut",
-        "shortcut": "Ctrl + X"
-      },
-      {
-        "id": 9,
-        "description": "Paste",
-        "shortcut": "Ctrl + V"
-      },
-      {
-        "id": 10,
-        "description": "Select All",
-        "shortcut": "Ctrl + A"
-      },
-      {
-        "id": 11,
-
-        "description": "Comment/Uncomment",
-        "shortcut": "Ctrl + /"
-      },
-      {
-        "id": 12,
-
-        "description": "Go to Definition",
-        "shortcut": "F12"
-      },
-      {
-        "id": 13,
-
-        "description": "Find",
-        "shortcut": "Ctrl + F"
-      },
-      {
-        "id": 14,
-
-        "description": "Replace",
-        "shortcut": "Ctrl + H"
-      },
-      {
-        "id": 15,
-        "description": "Toggle Fullscreen",
-        "shortcut": "F11"
-      },
-      {
-        "id": 16,
-        "description": "Start Debugging",
-        "shortcut": "F5"
-      },
-      {
-        "id": 17,
-        "description": "Step Over",
-        "shortcut": "F10"
-      },
-      {
-        "id": 18,
-        "description": "Step Into",
-        "shortcut": "F11"
-      },
-      {
-        "id": 19,
-        "description": "Stop Debugging",
-        "shortcut": "Shift + F5"
-      },
-      {
-        "id": 20,
-        "description": "Install Extension",
-        "shortcut": "Ctrl + Shift + X"
-      }
-    ]
-  }
-
-  
+  "shortcuts": [
+    {
+      "id": 1,
+      "description": "Show Command Palette",
+      "shortcut": "Meta + Shift + P"
+    },
+    {
+      "id": 2,
+      "description": "Open File",
+      "shortcut": "Meta + O"
+    },
+    {
+      "id": 3,
+      "description": "Save File",
+      "shortcut": "Meta + S"
+    },
+    {
+      "id": 4,
+      "description": "Close Window",
+      "shortcut": "Meta + Shift + W"
+    },
+    {
+      "id": 5,
+      "description": "Undo",
+      "shortcut": "Meta + Z"
+    },
+    {
+      "id": 6,
+      "description": "Redo",
+      "shortcut": "Meta + Shift + Z"
+    },
+    {
+      "id": 7,
+      "description": "Copy",
+      "shortcut": "Meta + C"
+    },
+    {
+      "id": 8,
+      "description": "Cut",
+      "shortcut": "Meta + X"
+    },
+    {
+      "id": 9,
+      "description": "Paste",
+      "shortcut": "Meta + V"
+    },
+    {
+      "id": 10,
+      "description": "Select All",
+      "shortcut": "Meta + A"
+    },
+    {
+      "id": 11,
+      "description": "Comment/Uncomment",
+      "shortcut": "Meta + /"
+    },
+    {
+      "id": 12,
+      "description": "Go to Definition",
+      "shortcut": "F12"
+    },
+    {
+      "id": 13,
+      "description": "Find",
+      "shortcut": "Meta + F"
+    },
+    {
+      "id": 14,
+      "description": "Replace",
+      "shortcut": "Meta + H"
+    },
+    {
+      "id": 15,
+      "description": "Toggle Fullscreen",
+      "shortcut": "F11"
+    },
+    {
+      "id": 16,
+      "description": "Start Debugging",
+      "shortcut": "F5"
+    },
+    {
+      "id": 17,
+      "description": "Step Over",
+      "shortcut": "F10"
+    },
+    {
+      "id": 18,
+      "description": "Step Into",
+      "shortcut": "F11"
+    },
+    {
+      "id": 19,
+      "description": "Stop Debugging",
+      "shortcut": "Shift + F5"
+    },
+    {
+      "id": 20,
+      "description": "Install Extension",
+      "shortcut": "Meta + Shift + X"
+    }
+  ]
+}

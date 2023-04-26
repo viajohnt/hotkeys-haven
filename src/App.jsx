@@ -13,6 +13,18 @@ import Trainer from './Pages/TrainerPage/Trainer'
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null)
 
+  const Root = () => {
+    return (
+      <>
+      <Header setCurrentUser={setCurrentUser} currentUser = {currentUser} onHandleLogout={handleLogout} /> 
+      <div>
+        <Outlet />
+      </div>
+      <Footer />
+      </>
+    )
+  }
+  
   function handleLogout() {
     localStorage.removeItem("currentUser");
     setCurrentUser(null);
@@ -21,7 +33,7 @@ export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root/>}>
-        <Route index element ={<Home currentUser = {currentUser} setCurrentUser={setCurrentUser} onHandleLogout={handleLogout}/>}/>
+        <Route index element ={<Home />}/>
         <Route path="/register" element={<SignUpForm currentUser = {currentUser}  setCurrentUser={setCurrentUser} />}/>
         <Route path="/login" element={<LoginForm currentUser = {currentUser}  setCurrentUser={setCurrentUser} />}/>
         <Route path="/game" element={<Trainer />}/>
@@ -33,17 +45,5 @@ export default function App() {
     <div>
       <RouterProvider router={router} />
     </div>
-  )
-}
-
-const Root = () => {
-  return (
-    <>
-    <Header />
-    <div>
-      <Outlet />
-    </div>
-    <Footer />
-    </>
   )
 }
