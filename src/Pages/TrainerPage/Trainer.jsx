@@ -6,8 +6,11 @@ const Trainer = () => {
   const [pressedKeys, setPressedKeys] = useState(new Set())
   const [userInput, setUserInput] = useState('')
   const [score, setScore] = useState(0)
+  const [highScore, setHighScore] = useState(0)
   const [timeLeft, setTimeLeft] = useState(10)
   const [gameStarted, setGameStarted] = useState(false)
+  const [hasPlayed, setHasPlayed] = useState(false)
+  const [gameEnded, setGameEnded] = useState(false)
 
   useEffect(() => {
     if (gameStarted && timeLeft > 0) {
@@ -15,8 +18,8 @@ const Trainer = () => {
         setTimeLeft(timeLeft - 1)
       }, 1000)
       return () => clearTimeout(timer)
-    } else {
-      setGameStarted(false)
+    } else if (gameStarted && timeLeft === 0) {
+      endGame()
     }
   }, [gameStarted, timeLeft])
 
@@ -47,11 +50,17 @@ const Trainer = () => {
         newSet.delete(e.code)
         return newSet
       })
-      if (currentShortcut && userInput === currentShortcut.shortcut) {
+    
+      if (
+        currentShortcut &&
+        userInput === currentShortcut.shortcut &&
+        pressedKeys.size === 0
+      ) {
         setScore((prevScore) => prevScore + 1)
         nextShortcut()
       }
     }
+
     if (gameStarted) {
       window.addEventListener('keydown', handleKeyDown)
       window.addEventListener('keyup', handleKeyUp)
@@ -66,7 +75,6 @@ const Trainer = () => {
     }
   }, [gameStarted])
 
-
   useEffect(() => {
     setUserInput(Array.from(pressedKeys).map(keyName).join(' + '))
     if (currentShortcut?.shortcut && userInput === currentShortcut.shortcut) {
@@ -74,6 +82,12 @@ const Trainer = () => {
       nextShortcut()
     }
   }, [pressedKeys])
+
+  const updateHighScore = () => {
+    if (score > highScore) {
+      setHighScore(score)
+    }
+  }
 
   const startGame = () => {
     setGameStarted(true)
@@ -87,6 +101,15 @@ const Trainer = () => {
     setScore(0)
     setTimeLeft(10)
     setGameStarted(false)
+    setHasPlayed(true)
+    setGameEnded(false)
+  }
+
+  const endGame = () => {
+    setGameStarted(false)
+    updateHighScore()
+    setHasPlayed(true)
+    setGameEnded(true)
   }
 
   const keyName = (key) => {
@@ -112,25 +135,64 @@ const Trainer = () => {
   }
   
   return (
-    <div tabIndex="0" className="fixed translate-x-[40rem] translate-y-[15rem]">
-      <h1 id="game-container">Game Dontainer</h1>
+    <div tabIndex="0" className="game-container translate-x-[45rem] translate-y-[15rem]">
+      <h1></h1>
       <p>Score: {score}</p>
+      <p>High Score: {highScore}</p>
       <p>Time Left: {timeLeft}</p>
-      {!gameStarted && <button onClick={startGame} className="start-game-button font-chakra-petch rounded-md border border-transparent px-2 py-1 text-bold font-medium text-slate-500 bg-emerald-300 mt-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500border hover:border-indigo-300  focus-visible:outline-[4px] focus-visible:ring-[auto] focus-visible:ring-opacity-50 focus-visible:ring-indigo-500 hover:translate-y-[-10px] transition-all duration-300 ease-out">
-        Start</button>}
+  
+      {!gameStarted && !hasPlayed && !gameEnded && (
+        <button
+          onClick={startGame}
+          className="start-game-button font-chakra-petch rounded-md border border-transparent px-2 py-1 text-bold font-medium text-slate-500 bg-emerald-300 mt-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500border hover:border-indigo-300 focus-visible:outline-[4px] focus-visible:ring-[auto] focus-visible:ring-opacity-50 focus-visible:ring-indigo-500 hover:translate-y-[-10px] transition-all duration-300 ease-out">
+          Start
+        </button>
+      )}
+  
       {gameStarted && currentShortcut && (
         <div>
           <p>Action: {currentShortcut.description}</p>
-          <input type="text" value={userInput} readOnly placeholder="Type your shortcut" onChange={(e)=> startGame(e.target.value)} />
+          <input type="text" value={userInput} readOnly placeholder="Type your shortcut" />
+        </div>
+      )}
+  
+      {(!gameStarted || (gameStarted && !currentShortcut)) && hasPlayed && !gameEnded && (
+        <div>
+          <button
+            onClick={() => {
+              resetGame()
+              startGame()
+            }}
+            className="reset-game-button font-chakra-petch rounded-md border border-transparent px-2 py-1 text-bold font-medium text-slate-500 bg-amber-300 mt-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500border hover:border-indigo-300 focus-visible:outline-[4px] focus-visible:ring-[auto] focus-visible:ring-opacity-50 focus-visible:ring-indigo-500 hover:translate-y-[-10px] transition-all duration-300 ease-out">
+            Play Again
+          </button>
+        </div>
+      )}
+  
+      {gameEnded && (
+        <div>
+          <button
+            onClick={() => {
+              resetGame()
+              startGame()
+            }}
+            className="reset-game-button font-chakra-petch rounded-md border border-transparent px-2 py-1 text-bold font-medium text-slate-500 bg-amber-300 mt-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500border hover:border-indigo-300 focus-visible:outline-[4px] focus-visible:ring-[auto] focus-visible:ring-opacity-50 focus-visible:ring-indigo-500 hover:translate-y-[-10px] transition-all duration-300 ease-out">
+            Play Again
+          </button>
         </div>
       )}
       {gameStarted && (
         <div>
-          <button onClick={resetGame}className="reset-game-button font-chakra-petch rounded-md border border-transparent px-2 py-1 text-bold font-medium text-slate-500 bg-amber-300 mt-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500border hover:border-indigo-300  focus-visible:outline-[4px] focus-visible:ring-[auto] focus-visible:ring-opacity-50 focus-visible:ring-indigo-500 hover:translate-y-[-10px] transition-all duration-300 ease-out">
-            Reset Game</button>
+          <button
+            onClick={resetGame}
+            className="reset-game-button font-chakra-petch rounded-md border border-transparent px-2 py-1 text-bold font-medium text-slate-500 bg-amber-300 mt-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500border hover:border-indigo-300 focus-visible:outline-[4px] focus-visible:ring-[auto] focus-visible:ring-opacity-50 focus-visible:ring-indigo-500 hover:translate-y-[-10px] transition-all duration-300 ease-out">
+            Reset Game
+          </button>
         </div>
       )}
-    </div>
+      </div>
   )
 }
+
 export default Trainer
+   

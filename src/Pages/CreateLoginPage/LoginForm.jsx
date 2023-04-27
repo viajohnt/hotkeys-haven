@@ -1,37 +1,36 @@
-import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useState } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 
 export default function LoginForm({ setCurrentUser }) {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
     username: '',
     password: '',
-  });
-
-  const navigate = useNavigate();
+  })
+  const navigate = useNavigate()
 
   function handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
     fetch('http://localhost:3000/users')
       .then(response => response.json())
       .then(data => {
-        const user = data.find(user => user.username === formData.username && user.password === formData.password);
+        const user = data.find(user => user.username === formData.username && user.password === formData.password)
         if (user) {
-          setCurrentUser(user.username);
-          navigate('/', { state: { user: user.username } });
+          setCurrentUser(user.username)
+          navigate('/', { state: { user: user.username } })
         } else {
-          alert('Invalid username or password');
+          alert('Invalid username or password')
         }
-      });
+      })
   }
 
   function handleChange(event) {
-    const { name, value } = event.target;
-    setFormData(prevFormData => ({ ...prevFormData, [name]: value }));
+    const { name, value } = event.target
+    setFormData(prevFormData => ({ ...prevFormData, [name]: value }))
   }
 
   function toggleShowPassword() {
-    setShowPassword(prevState => !prevState);
+    setShowPassword(prevState => !prevState)
   }
 
   return (
@@ -76,5 +75,5 @@ export default function LoginForm({ setCurrentUser }) {
         </div>
       </form>
     </div>
-  );
+  )
 }

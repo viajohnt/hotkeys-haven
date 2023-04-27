@@ -1,14 +1,13 @@
 import { createBrowserRouter, createRoutesFromElements, Route, Outlet, RouterProvider } from 'react-router-dom'
-import React, {useState} from 'react';
+import React, {useState} from 'react'
 import './index.css'
 import Home  from './Pages/HomePage/Home'
-import SignUpForm from './Pages/CreateLoginPage/SignUpForm';
-import LoginForm from './Pages/CreateLoginPage/LoginForm';
-import ErrorPage from './Pages/ErrorPage';
+import SignUpForm from './Pages/CreateLoginPage/SignUpForm'
+import LoginForm from './Pages/CreateLoginPage/LoginForm'
+import ErrorPage from './Pages/ErrorPage'
 import Header from './Pages/HomePage/Header'
 import Footer from './Pages/HomePage/Footer'
 import Trainer from './Pages/TrainerPage/Trainer'
-
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -26,8 +25,8 @@ export default function App() {
   }
   
   function handleLogout() {
-    localStorage.removeItem("currentUser");
-    setCurrentUser(null);
+    localStorage.removeItem("currentUser")
+    setCurrentUser(null)
   }
   
   const router = createBrowserRouter(
@@ -36,7 +35,7 @@ export default function App() {
         <Route index element ={<Home />}/>
         <Route path="/register" element={<SignUpForm currentUser = {currentUser}  setCurrentUser={setCurrentUser} />}/>
         <Route path="/login" element={<LoginForm currentUser = {currentUser}  setCurrentUser={setCurrentUser} />}/>
-        <Route path="/game" element={<Trainer />}/>
+        <Route path="/game" element={<Trainer currentUser = {currentUser} setCurrentUser={setCurrentUser}   />}/>
         <Route path="*" element={<ErrorPage/>}/>
       </Route>
     )

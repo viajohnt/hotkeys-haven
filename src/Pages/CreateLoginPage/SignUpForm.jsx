@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function SignUpForm({setCurrentUser}) {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
-  });
-
+  })
+  
   const navigate = useNavigate()
 
   function handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
     const newUser = {
       username: formData.username,
       email: formData.email,
@@ -28,13 +28,13 @@ export default function SignUpForm({setCurrentUser}) {
     })
       .then((response) => response.json())
       .then((data) => {
-        setCurrentUser(data.username); 
-        navigate('/', { state: { user: data.username } }); 
+        setCurrentUser(data.username)
+        navigate('/', { state: { user: data.username } })
       })
   }
 
   function handleChange(event) {
-    const { name, value } = event.target;
+    const { name, value } = event.target
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }))
   }
 

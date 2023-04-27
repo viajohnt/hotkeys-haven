@@ -1,6 +1,6 @@
-import React from "react";
-import mouseTrapLogo from "../../assets/mousetraplogo.png";
-import { Link } from "react-router-dom";
+import React from "react"
+import mouseTrapLogo from "../../assets/mousetraplogo.png"
+import { Link } from "react-router-dom"
 
 export default function Header({ currentUser, onHandleLogout }) {
   return (
@@ -58,5 +58,5 @@ export default function Header({ currentUser, onHandleLogout }) {
       </div>
     </header>
     </>
-  );
+  )
 }
