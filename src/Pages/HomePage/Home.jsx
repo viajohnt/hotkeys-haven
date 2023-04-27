@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import Header from './Header'
-import Footer from './Footer'
 
 export default function Home() {
   const [users, setUsers] = useState([])
@@ -11,7 +9,6 @@ export default function Home() {
     .then (data => setUsers(data))
   },[])
 
-  
   return (
     <>
       <h2 className='home-title font-bold text-3xl translate-y-[10rem] translate-x-[40rem] text-amber-300 '>Daily Affirmations:</h2>

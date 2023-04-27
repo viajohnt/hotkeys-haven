@@ -65,13 +65,13 @@ export default function LoginForm({ setCurrentUser }) {
         </div>
         <button
           type="submit"
-          className="submit-button font-chakra-petch rounded-md border border-transparent px-2 py-1 text-base font-medium text-white bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500border hover:border-indigo-300  focus-visible:outline-[4px] focus-visible:ring-[auto] focus-visible:ring-opacity-50 focus-visible:ring-indigo-500"
+          className="submit-button font-chakra-petch rounded-md border border-transparent px-2 py-1 text-base font-medium text-black bg-lime-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500border hover:border-indigo-300  focus-visible:outline-[4px] focus-visible:ring-[auto] focus-visible:ring-opacity-50 focus-visible:ring-indigo-500"
         >
           Submit
         </button>
         <div className="mt-4">
           <p>Don't have an account?</p>
-          <Link to="/register" className="signup-link font-bold underline translate-x-[10rem] ">Sign up</Link>
+          <div className="signup-link font-bold underline translate-x-[3.5rem] translate-y-[2rem] "><Link to="/register">Sign up</Link></div>
         </div>
       </form>
     </div>
