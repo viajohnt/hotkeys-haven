@@ -3,102 +3,212 @@
     {
       "id": 1,
       "description": "Show Command Palette",
-      "shortcut": "Meta + Shift + P"
+      "shortcut": "⌘ + ⇧ + P"
     },
     {
       "id": 2,
       "description": "Open File",
-      "shortcut": "Meta + O"
+      "shortcut": "⌘ + O"
     },
     {
       "id": 3,
       "description": "Save File",
-      "shortcut": "Meta + S"
-    },
-    {
-      "id": 4,
-      "description": "Close Window",
-      "shortcut": "Meta + Shift + W"
+      "shortcut": "⌘ + S"
     },
     {
       "id": 5,
       "description": "Undo",
-      "shortcut": "Meta + Z"
+      "shortcut": "⌘ + Z"
     },
     {
       "id": 6,
       "description": "Redo",
-      "shortcut": "Meta + Shift + Z"
+      "shortcut": "⌘ + ⇧ + Z"
     },
     {
       "id": 7,
       "description": "Copy",
-      "shortcut": "Meta + C"
+      "shortcut": "⌘ + C"
     },
     {
       "id": 8,
       "description": "Cut",
-      "shortcut": "Meta + X"
+      "shortcut": "⌘ + X"
     },
     {
       "id": 9,
       "description": "Paste",
-      "shortcut": "Meta + V"
+      "shortcut": "⌘ + V"
     },
     {
       "id": 10,
       "description": "Select All",
-      "shortcut": "Meta + A"
+      "shortcut": "⌘ + A"
     },
     {
       "id": 11,
       "description": "Comment/Uncomment",
-      "shortcut": "Meta + /"
-    },
-    {
-      "id": 12,
-      "description": "Go to Definition",
-      "shortcut": "F12"
+      "shortcut": "⌘ + /"
     },
     {
       "id": 13,
       "description": "Find",
-      "shortcut": "Meta + F"
+      "shortcut": "⌘ + F"
     },
     {
       "id": 14,
       "description": "Replace",
-      "shortcut": "Meta + H"
-    },
-    {
-      "id": 15,
-      "description": "Toggle Fullscreen",
-      "shortcut": "F11"
-    },
-    {
-      "id": 16,
-      "description": "Start Debugging",
-      "shortcut": "F5"
-    },
-    {
-      "id": 17,
-      "description": "Step Over",
-      "shortcut": "F10"
-    },
-    {
-      "id": 18,
-      "description": "Step Into",
-      "shortcut": "F11"
-    },
-    {
-      "id": 19,
-      "description": "Stop Debugging",
-      "shortcut": "Shift + F5"
+      "shortcut": "⌘ + H"
     },
     {
       "id": 20,
       "description": "Install Extension",
-      "shortcut": "Meta + Shift + X"
+      "shortcut": "⌘ + ⇧ + X"
+    },
+    {
+      "id": 23,
+      "description": "Paste",
+      "shortcut": "⌘ + V"
+    },
+    {
+      "id": 24,
+      "description": "Delete Line",
+      "shortcut": "⇧ + ⌘ + K"
+    },
+    {
+      "id": 25,
+      "description": "Insert Line Below",
+      "shortcut": "⌘ + Enter"
+    },
+    {
+      "id": 26,
+      "description": "Insert Line Above",
+      "shortcut": "⇧ + ⌘ + Enter"
+    },
+    {
+      "id": 27,
+      "description": "Move Line Down",
+      "shortcut": "⌥ + DownArrow"
+    },
+    {
+      "id": 28,
+      "description": "Move Line Up",
+      "shortcut": "⌥ + UpArrow"
+    },
+    {
+      "id": 29,
+      "description": "Copy Line Down",
+      "shortcut": "⇧ + ⌥ + DownArrow"
+    },
+    {
+      "id": 30,
+      "description": "Copy Line Up",
+      "shortcut": "⇧ + ⌥ + UpArrow"
+    },
+    {
+      "id": 31,
+      "description": "Undo",
+      "shortcut": "⌘ + Z"
+    },
+    {
+      "id": 39,
+      "description": "Select current line",
+      "shortcut": "⌘ + L"
+    },
+    {
+      "id": 40,
+      "description": "Insert Cursor Below",
+      "shortcut": "⌥ + ⌘ + DownArrow"
+    },
+    {
+      "id": 41,
+      "description": "Insert Cursor Above",
+      "shortcut": "⌥ + ⌘ + UpArrow"
+    },
+    {
+      "id": 43,
+      "description": "Indent Line",
+      "shortcut": "⌘ + ]"
+    },
+    {
+      "id": 44,
+      "description": "Outdent Line",
+      "shortcut": "⌘ + ["
+    },
+    {
+      "id": 49,
+      "description": "Scroll Line Down",
+      "shortcut": "Control + PageDown"
+    },
+    {
+      "id": 61,
+      "description": "Toggle Comment",
+      "shortcut": "⌘ + /"
+    },
+    {
+      "id": 62,
+      "description": "Toggle Block Comment",
+      "shortcut": "⇧ + ⌥ + A"
+    },
+    {
+      "id": 63,
+      "description": "Find",
+      "shortcut": "⌘ + F"
+    },
+    {
+      "id": 64,
+      "description": "Replace",
+      "shortcut": "⌥ + ⌘ + F"
+    },
+    {
+      "id": 65,
+      "description": "Find Previous",
+      "shortcut": "⇧ + Enter"
+    },
+    {
+      "id": 72,
+      "description": "Toggle Word Wrap",
+      "shortcut": "⌥ + Z"
+    },
+    {
+      "id": 73,
+      "description": "New File",
+      "shortcut": "⌘ + N"
+    },
+    {
+      "id": 74,
+      "description": "Open File...",
+      "shortcut": "⌘ + O"
+    },
+    {
+      "id": 75,
+      "description": "Save",
+      "shortcut": "⌘ + S"
+    },
+    {
+      "id": 76,
+      "description": "Save All",
+      "shortcut": "⌥ + ⌘ + S"
+    },
+    {
+      "id": 77,
+      "description": "Save As...",
+      "shortcut": "⇧ + ⌘ + S"
+    },
+    {
+      "id": 78,
+      "description": "Show Search",
+      "shortcut": "⇧ + ⌘ + F"
+    },
+    {
+      "id": 79,
+      "description": "Replace in Files",
+      "shortcut": "⇧ + ⌘ + H"
+    },
+    {
+      "id": 80,
+      "description": "Toggle Match Case",
+      "shortcut": "⌥ + ⌘ + C"
     }
   ]
 }

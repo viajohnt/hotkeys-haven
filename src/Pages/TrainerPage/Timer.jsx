@@ -2,7 +2,7 @@ import React from 'react'
 
 const Timer = ({ timeLeft }) => {
   const calculateTimeFraction = () => {
-    return timeLeft / 30
+    return timeLeft / 60
   };
 
   const setCircleDasharray = () => {
@@ -11,8 +11,8 @@ const Timer = ({ timeLeft }) => {
   };
 
   const remainingPathColor = () => {
-    if (timeLeft <= 5) return 'red';
-    if (timeLeft <= 15) return 'orange'
+    if (timeLeft <= 15) return 'red';
+    if (timeLeft <= 30) return 'orange'
     return 'green'
   };
 

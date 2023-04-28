@@ -9,7 +9,7 @@ const Trainer = () => {
   const [userInput, setUserInput] = useState('')
   const [score, setScore] = useState(0)
   const [highScore, setHighScore] = useState(0)
-  const [timeLeft, setTimeLeft] = useState(30)
+  const [timeLeft, setTimeLeft] = useState(60)
   const [gameStarted, setGameStarted] = useState(false)
   const [hasPlayed, setHasPlayed] = useState(false)
   const [gameEnded, setGameEnded] = useState(false)
@@ -103,7 +103,7 @@ const Trainer = () => {
     setPressedKeys(new Set())
     setUserInput('')
     setScore(0)
-    setTimeLeft(30)
+    setTimeLeft(60)
     setGameStarted(false)
     setHasPlayed(true)
     setGameEnded(false)
@@ -120,11 +120,19 @@ const Trainer = () => {
     const keyMapping = {
       'ControlLeft': 'Control',
       'ControlRight': 'Control',
-      'ShiftLeft': 'Shift',
-      'ShiftRight': 'Shift',
-      'MetaLeft': 'Meta',
-      'MetaRight': 'Meta',
-      'Slash': '/'
+      'ShiftLeft': '⇧',
+      'ShiftRight': '⇧',
+      'MetaLeft': '⌘',
+      'MetaRight': '⌘',
+      'Slash': '/',
+      'BracketRight': "]",
+      'BracketLeft': "[",
+      'AltLeft': '⌥',
+      'AltRight': '⌥',
+      'ArrowUp': 'UpArrow',
+      'ArrowDown': 'DownArrow',
+      'ArrowLeft': 'LeftArrow',
+      'ArrowRight': 'RightArrow',
     }
     if (key.startsWith('Key')) {
       return key.slice(3)
@@ -163,7 +171,7 @@ const Trainer = () => {
   return (
     <div tabIndex="0" className="game-container translate-x-[45rem] translate-y-[15rem]">
       <div className='highscore text-3xl translate-y-[-5rem] translate-x-[-6.5rem] text-pink-400'>High Score: {highScore}</div>
-      <div className='score text-4xl translate-x-[-4.8rem] translate-y-[-2.5rem]'>Score: {score}</div>
+      <div className='score text-4xl translate-x-[-4.8rem] translate-y-[-2.5rem] text-amber-300'>Score: {score}</div>
       <div className='timeleft text-3xl translate-x-[28rem] translate-y-[-9.7rem] text-fuchsia-300'>Time Left:</div>
       <Timer timeLeft={timeLeft} />
       <div className='best-container translate-x-[-11.5rem] translate-y-[-18.5rem] text-2xl flex flex-col items-center justify-center'>

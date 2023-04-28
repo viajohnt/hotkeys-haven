@@ -19,16 +19,16 @@
       "id": 3
     },
     {
-      "username": "test",
-      "email": "test",
-      "password": "test",
-      "id": 4
-    },
-    {
       "username": "mom",
       "email": "mom@mom.com",
       "password": "mom",
       "id": 5
+    },
+    {
+      "username": "yoshi",
+      "email": "yoshi",
+      "password": "yoshi",
+      "id": 6
     }
   ]
 }
