@@ -29,6 +29,18 @@
       "email": "yoshi",
       "password": "yoshi",
       "id": 6
+    },
+    {
+      "username": "yosh",
+      "email": "yosh",
+      "password": "yosh",
+      "id": 7
+    },
+    {
+      "username": "yosh",
+      "email": "yosh@yosh.com",
+      "password": "adsaadasd",
+      "id": 8
     }
   ]
 }

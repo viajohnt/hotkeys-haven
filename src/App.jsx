@@ -15,7 +15,7 @@ export default function App() {
 
   const Root = () => {
     const location = useLocation();
-    const shouldHideFooter = location.pathname === '/allshortcuts';
+    const shouldHideFooter = location.pathname === '/allshortcuts'
   
     return (
       <>
