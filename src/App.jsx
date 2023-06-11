@@ -46,6 +46,7 @@ export default function App() {
         <Route path="/game" element={<Trainer currentUser = {currentUser} setCurrentUser={setCurrentUser} />}/>
         <Route path="/allshortcuts" element={<ShortcutList />} />
         <Route path="*" element={<ErrorPage/>}/>
+        
       </Route>
     )
   )
